@@ -24,3 +24,8 @@ Select Campagnes.nom_campagne, sum(Performances.revenus_generes)
 from Campagnes 
 inner join performances on Campagnes.campagne_id = Performances.campagne_id 
 group by Campagnes.campagne_id
+
+Select Campagnes.canal, avg(Performances.clics) 
+from Campagnes 
+inner join performances on Campagnes.campagne_id = Performances.campagne_id 
+group by Campagnes.canal
