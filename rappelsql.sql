@@ -29,3 +29,7 @@ Select Campagnes.canal, avg(Performances.clics)
 from Campagnes 
 inner join performances on Campagnes.campagne_id = Performances.campagne_id 
 group by Campagnes.canal
+
+Select Clients.nom, Segments.segment_id, Segments.nom_segment, Segments.description
+from Clients
+inner join Segments on Segments.segment_id = Clients.segment_id
