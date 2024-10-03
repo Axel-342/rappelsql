@@ -15,3 +15,5 @@ select count (*) from Clients
 select avg(age) from Clients
 
 select sum(budget) from Campagnes
+
+select * from Campagnes order by budget desc limit 1
