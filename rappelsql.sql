@@ -17,3 +17,5 @@ select avg(age) from Clients
 select sum(budget) from Campagnes
 
 select * from Campagnes order by budget desc limit 1
+
+select count(*) from Clients group by segment_id
