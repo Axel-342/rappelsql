@@ -39,8 +39,9 @@ from Clients
 inner join Performances on Performances.client_id = Clients.client_id
 Where Performances.revenus_generes > 1000
 
-Select Clients.nom, Performances.revenus_generes
+Select Clients.nom, max(Performances.revenus_generes)
 from Clients
 inner join Performances on Performances.client_id = Clients.client_id
-order by Performances.revenus_generes desc
-limit 1
+
+Select nom_campagne, budget from Campagnes
+where (Select avg(budget) From Campagnes) < budget
