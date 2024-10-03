@@ -20,4 +20,7 @@ select * from Campagnes order by budget desc limit 1
 
 select count(*) from Clients group by segment_id
 
-Select nom_campagne,revenus_generes from Campagnes inner join performances where Campagnes.campagne_id = Performances.campagne_id
+Select Campagnes.nom_campagne, sum(Performances.revenus_generes) 
+from Campagnes 
+inner join performances on Campagnes.campagne_id = Performances.campagne_id 
+group by Campagnes.campagne_id
