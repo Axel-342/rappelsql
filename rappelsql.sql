@@ -38,3 +38,9 @@ Select Clients.nom, Performances.revenus_generes
 from Clients
 inner join Performances on Performances.client_id = Clients.client_id
 Where Performances.revenus_generes > 1000
+
+Select Clients.nom, Performances.revenus_generes
+from Clients
+inner join Performances on Performances.client_id = Clients.client_id
+order by Performances.revenus_generes desc
+limit 1
