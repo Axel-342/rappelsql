@@ -33,3 +33,8 @@ group by Campagnes.canal
 Select Clients.nom, Segments.segment_id, Segments.nom_segment, Segments.description
 from Clients
 inner join Segments on Segments.segment_id = Clients.segment_id
+
+Select Clients.nom, Performances.revenus_generes
+from Clients
+inner join Performances on Performances.client_id = Clients.client_id
+Where Performances.revenus_generes > 1000
